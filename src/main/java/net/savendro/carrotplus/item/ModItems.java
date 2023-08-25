@@ -18,6 +18,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_FOOD).food(ModFoods.YAM)));
     public static final RegistryObject<Item> BAKED_YAM= ITEMS.register("baked_yam",
             () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_FOOD).food(ModFoods.BAKED_YAM)));
+    public static final RegistryObject<Item> COPPERED_POTATO= ITEMS.register("coppered_potato",
+            () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_FOOD).food(ModFoods.COPPERED_POTATO)));
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
     }
