@@ -11,6 +11,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.savendro.carrotplus.block.ModBlocks;
 import net.savendro.carrotplus.item.ModItems;
 import org.slf4j.Logger;
 
@@ -28,6 +29,7 @@ public class Carrotplus
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
         modEventBus.addListener(this::addCreative);
@@ -43,6 +45,8 @@ public class Carrotplus
             event.accept(ModItems.YAM);
             event.accept(ModItems.BAKED_YAM);
             event.accept(ModItems.COPPERED_POTATO);
+            event.accept(ModItems.YAM_SEEDS);
+
         }
     }
 
