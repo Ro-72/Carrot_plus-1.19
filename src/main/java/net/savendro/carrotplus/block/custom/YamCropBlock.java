@@ -10,7 +10,7 @@ import net.savendro.carrotplus.item.ModItems;
 
 public class YamCropBlock extends CropBlock {
     public static final int MAX_AGE = 5;
-    public final IntegerProperty AGE = BlockStateProperties.AGE_5;
+    public static final IntegerProperty AGE = BlockStateProperties.AGE_5;
 
     public YamCropBlock(Properties pProperties){
         super(pProperties);
@@ -22,7 +22,7 @@ public class YamCropBlock extends CropBlock {
     }
 
     @Override
-    protected IntegerProperty getAgeProperty() {
+    public IntegerProperty getAgeProperty() {
         return AGE;
     }
 
